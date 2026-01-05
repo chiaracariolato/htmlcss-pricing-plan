@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+body {
+    font-family: sans-serif;
+}
+
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -14,15 +18,44 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 8px;
+    padding: 24px 0px 64px 0px;
 }
 
-header section {
-    min-width: 500px;
+header h1 {
+    font-size: 38px;
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+
+header p {
+    font-size: 12px;
+    color: grey;
+    font-weight: 300;
 }
 
 header div {
     display: flex;
     justify-content: flex-end;
+    font-size: 12px;
+    color: grey;
+    font-weight: 300;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+header i {
+    font-size: 24px;
+}
+
+.black {
+    color: black;
+}
+
+header div span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .cards {
@@ -32,32 +65,131 @@ header div {
 }
 
 .card {
-    flex-basis: calc((100%-32)/3);
+    flex-basis: calc((100% - 32px) / 3);
     flex-shrink: 0;
-    min-width: 220px;
+    min-width: 270px;
     flex-grow: 1;
 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+
     border-radius: 16px;
-    padding: 16px;
+    padding: 32px 24px 40px;
 }
 
+
 .secondary-card {
-    border: 1px black solid;
+    box-shadow: 2px 2px 10px 1px rgb(0 0 0 / 10%);
+    /* offsetX offsetY blurradius e spreadradius (vedi mdn) */
 }
 
 .primary-card {
-    background-color: blueviolet;
+    background-color: #6E00F9;
     color: white;
+}
+
+.card h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.card p {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.title {
+    align-self: flex-start;
+}
+
+.subtitle {
+    color: grey;
+}
+
+#dollar {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cost {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.period {
+    color: grey;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.period-primary {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.fee {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.tag {
+    background-color: #E3E3E3;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+button {
+    appearance: none;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.secondary-button {
+    background-color: #6E00F9;
+    color: white;
+}
+
+.primary-button {
+    color: #6E00F9;
 }
 
 .list-item{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 8px;
+
+    font-size: 16px;
+    font-weight: 300;
 }
 
-.feature {
-    flex-basis: calc((100% - 8) / 2);
-    flex-shrink: 0;
-    min-width: 80px;
+.list-item div{
+    padding: 8px 0px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+
+    flex: 1 1 50%;
+    min-width: 0;
 }
+
+.list-item i {
+    font-size: 24px;
+}
+
+.list-item {
+    min-width: none;
+    max-width: 300px;
+}
+
+
+
+
