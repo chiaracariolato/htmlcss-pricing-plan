@@ -1,61 +1,59 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-body {
-    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 16px 16px;
+    font-family: sans-serif;
+    padding: 16px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 8px;
-    padding: 24px 0px 64px 0px;
+    margin: 8px 0px 32px;
+    gap: 16px;
 }
 
-header h1 {
-    font-size: 38px;
-    font-weight: 600;
-    padding-bottom: 4px;
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 2px;
 }
 
 header p {
-    font-size: 12px;
-    color: grey;
+    font-size: 10px;
     font-weight: 300;
+    color: grey;
 }
 
-header div {
+.period {
     display: flex;
     justify-content: flex-end;
-    font-size: 12px;
-    color: grey;
-    font-weight: 300;
-    gap: 8px;
     flex-grow: 1;
+    align-items: center;
+    gap: 8px;
 }
 
-header i {
-    font-size: 24px;
-}
-
-.black {
-    color: black;
-}
-
-header div span {
+.period div {
     display: flex;
     align-items: center;
     gap: 4px;
+}
+
+.period span{
+    color: grey;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.period i {
+    font-size: 20px;
+    color: black;
 }
 
 .cards {
@@ -65,20 +63,19 @@ header div span {
 }
 
 .card {
-    flex-basis: calc((100% - 32px) / 3);
-    flex-shrink: 0;
-    min-width: 270px;
-    flex-grow: 1;
+    padding: 24px 16px 36px;
+    border-radius: 16px;
 
     display: flex;
     flex-direction: column;
-    gap: 16px;
     align-items: center;
+    flex-grow: 1;
+    gap: 16px;
 
-    border-radius: 16px;
-    padding: 32px 24px 40px;
+    flex-basis: calc((100% - 32px) / 3);
+    flex-shrink: 0;
+    min-width: 250px;
 }
-
 
 .secondary-card {
     box-shadow: 2px 2px 10px 1px rgb(0 0 0 / 10%);
@@ -90,54 +87,39 @@ header div span {
     color: white;
 }
 
-.card h2 {
-    font-size: 24px;
-    font-weight: 500;
-}
-
-.card p {
-    font-size: 12px;
-    font-weight: 300;
-}
-
 .title {
     align-self: flex-start;
 }
 
-.subtitle {
-    color: grey;
+.card h2 {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-#dollar {
+.secondary-card p {
+    color: grey;
+    font-size: 12px;
+    font-weight: 300;
+    display: inline;
+}
+
+.currency {
     font-size: 16px;
-    font-weight: 500;
 }
 
-.cost {
-    font-size: 48px;
-    font-weight: 600;
-}
-
-.period {
-    color: grey;
-    font-weight: 300;
-    font-size: 14px;
-}
-
-.period-primary {
-    font-weight: 300;
-    font-size: 14px;
+.price {
+    font-size: 32px;
 }
 
 .fee {
     font-size: 12px;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .tag {
-    background-color: #E3E3E3;
-    padding: 4px;
-    border-radius: 6px;
+    background-color: lightgray;
+    padding: 2px 4px;
+    border-radius: 4px;
 }
 
 button {
@@ -156,40 +138,44 @@ button {
 }
 
 .primary-button {
+    background-color: white;
     color: #6E00F9;
 }
 
-.list-item{
+.items {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 4px;
 
+    align-items: center;
+    width: 100%;
+}
+
+.items i {
+    font-size: 30px;
+}
+
+.items span {
     font-size: 16px;
     font-weight: 300;
 }
 
-.list-item div{
-    padding: 8px 0px;
-
+.items div {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     gap: 4px;
+    min-width: 200px;
+    align-items: center;
 
-    flex: 1 1 50%;
-    min-width: 0;
+    min-width: 250px;
 }
 
-.list-item i {
-    font-size: 24px;
+.black {
+    color: black;
 }
 
-.list-item {
-    min-width: none;
-    max-width: 300px;
+.primary-card p {
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+    display: inline;
 }
-
-
-
-
